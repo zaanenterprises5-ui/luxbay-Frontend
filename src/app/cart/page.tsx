@@ -14,7 +14,7 @@ import Link from "next/link";
 import AddressModal from "@/components/cart-page/AddressModal";
 
 // WhatsApp configuration
-const WHATSAPP_PHONE = process.env.NEXT_PUBLIC_WHATSAPP_PHONE || "918075306915";
+const WHATSAPP_PHONE = process.env.NEXT_PUBLIC_WHATSAPP_PHONE || "918075721347";
 const WHATSAPP_MESSAGE = "Hi X Emirates! I'd like to place an order.";
 
 export default function CartPage() {

@@ -7,6 +7,10 @@ type BannerSlide = {
   desktopImage: string;
   mobileImage: string;
   isActive: boolean;
+  desktopFit?: string;
+  desktopPosition?: string;
+  mobileFit?: string;
+  mobilePosition?: string;
   align: "left" | "center" | "right";
   tag: string;
   headline: string;
@@ -438,8 +442,9 @@ export default function HeroBanner() {
 
               // }}
               style={{
-                backgroundImage: `url(${isMobile ? s.mobileImage : s.desktopImage
-                  })`,
+                backgroundImage: `url(${isMobile ? s.mobileImage : s.desktopImage})`,
+                backgroundSize: isMobile ? (s.mobileFit || 'cover') : (s.desktopFit || 'cover'),
+                backgroundPosition: isMobile ? (s.mobilePosition || 'center') : (s.desktopPosition || 'center'),
               }}
               aria-hidden={i !== current}
             />

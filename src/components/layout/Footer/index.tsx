@@ -1,18 +1,26 @@
 import { cn } from "@/lib/utils";
 import { integralCF } from "@/styles/fonts";
 import { SocialNetworks } from "./footer.types";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import LinksSection from "./LinksSection";
 import LayoutSpacing from "./LayoutSpacing";
 
 const socialsData: SocialNetworks[] = [
-  { id: 1, icon: <FaTwitter />, url: "https://twitter.com" },
-  { id: 2, icon: <FaFacebookF />, url: "https://facebook.com" },
+  {
+    id: 1,
+    icon: <FaFacebookF />,
+    url: "https://www.facebook.com/share/1E1PGmPonR/?mibextid=wwXIfr",
+  },
+  {
+    id: 2,
+    icon: <FaInstagram />,
+    url: "https://www.instagram.com/creamxemirates_official_?igsh=NXk1djh2bjdvYW0=",
+  },
   {
     id: 3,
-    icon: <FaInstagram />,
-    url: "https://www.instagram.com/auravault06?igsh=NzBudmE1YTlsemNo",
+    icon: <FaWhatsapp />,
+    url: "https://wa.me/918075721347",
   },
 ];
 
