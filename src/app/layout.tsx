@@ -15,7 +15,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Luxbay",
+  title: "Luxbae",
   description: "Grace in every taste",
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],

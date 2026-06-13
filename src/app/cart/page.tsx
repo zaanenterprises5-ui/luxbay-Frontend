@@ -15,7 +15,7 @@ import AddressModal from "@/components/cart-page/AddressModal";
 
 // WhatsApp configuration
 const WHATSAPP_PHONE = process.env.NEXT_PUBLIC_WHATSAPP_PHONE || "917306203782";
-const WHATSAPP_MESSAGE = "Hi Luxbay! I'd like to place an order.";
+const WHATSAPP_MESSAGE = "Hi Luxbae! I'd like to place an order.";
 
 export default function CartPage() {
   const { cart, totalPrice, adjustedTotalPrice } = useAppSelector(

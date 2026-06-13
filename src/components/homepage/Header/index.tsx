@@ -154,6 +154,15 @@ export default function HeroBanner() {
     return null;
   }
 
+  const currentSlide = slides[current];
+  const currentAlign = currentSlide?.align ?? "center";
+
+  const getSlideImage = (slide: BannerSlide) => {
+    return isMobile
+      ? slide.mobileImage || slide.desktopImage
+      : slide.desktopImage || slide.mobileImage;
+  };
+
   return (
     <>
       <style>{`
@@ -164,7 +173,7 @@ export default function HeroBanner() {
           position: relative;
           width: 100%;
           height: 92vh;
-          min-height: 560px;
+          min-height: 520px;
           max-height: 900px;
           background: var(--brand-light);
           overflow: hidden;
@@ -175,8 +184,9 @@ export default function HeroBanner() {
         .slide-img {
           position: absolute;
           inset: 0;
+          background-repeat: no-repeat;
           background-size: cover;
-          background-position: center;
+          background-position: center center;
           transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
                       transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -196,39 +206,31 @@ export default function HeroBanner() {
         }
 
         /* ── overlay ── */
-        // .slide-overlay {
-        //   position: absolute;
-        //   inset: 0;
-        //   z-index: 3;
-        //   background: linear-gradient(
-        //     105deg,
-        //     rgba(255,255,255,0.78) 0%,
-        //     rgba(255,255,255,0.44) 50%,
-        //     rgba(255,255,255,0.08) 100%
-        //   );
-        // }
         .slide-overlay {
-  background: linear-gradient(
-    105deg,
-    rgba(255,255,255,0.2) 0%,
-    rgba(255,255,255,0.1) 50%,
-    rgba(255,255,255,0.05) 100%
-  );
-}
+          position: absolute;
+          inset: 0;
+          z-index: 3;
+          background: linear-gradient(
+            105deg,
+            rgba(0,0,0,0.20) 0%,
+            rgba(0,0,0,0.12) 35%,
+            rgba(0,0,0,0.08) 100%
+          );
+        }
         .slide-overlay.center {
           background: linear-gradient(
             180deg,
-            rgba(255,255,255,0.22) 0%,
-            rgba(255,255,255,0.70) 38%,
-            rgba(255,255,255,0.22) 100%
+            rgba(0,0,0,0.18) 0%,
+            rgba(0,0,0,0.16) 45%,
+            rgba(0,0,0,0.08) 100%
           );
         }
         .slide-overlay.right {
           background: linear-gradient(
             255deg,
-            rgba(255,255,255,0.80) 0%,
-            rgba(255,255,255,0.44) 50%,
-            rgba(255,255,255,0.06) 100%
+            rgba(0,0,0,0.18) 0%,
+            rgba(0,0,0,0.10) 45%,
+            rgba(0,0,0,0.06) 100%
           );
         }
 
@@ -414,12 +416,69 @@ export default function HeroBanner() {
           to { opacity: 1; transform: translateY(0); }
         }
 
-        @media (max-width: 640px) {
-          .arrow-btn { display: none; }
-          .banner-content { padding: 0 5vw; }
-          .banner-content.right { justify-content: flex-start; }
-          .slide-overlay.right {
-            background: linear-gradient(180deg,rgba(255,255,255,0.15) 0%,rgba(255,255,255,0.72) 55%,rgba(255,255,255,0.12) 100%);
+        @media (max-width: 1024px) {
+          .banner-root {
+            height: auto;
+            min-height: 48vh;
+            max-height: none;
+            padding-bottom: 24px;
+          }
+          .slide-img {
+            background-position: top center !important;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+          }
+          .slide-overlay {
+            background: linear-gradient(
+              180deg,
+              rgba(0,0,0,0.16) 0%,
+              rgba(0,0,0,0.10) 40%,
+              rgba(0,0,0,0.05) 100%
+            ) !important;
+          }
+          .arrow-btn { display: none !important; }
+          .banner-content {
+            padding: 0 4vw !important;
+            align-items: flex-end !important;
+            justify-content: center !important;
+            text-align: center !important;
+          }
+          .banner-content.left,
+          .banner-content.center,
+          .banner-content.right {
+            justify-content: center !important;
+            text-align: center !important;
+          }
+          .text-block {
+            width: min(100%, 92vw) !important;
+            max-width: 100% !important;
+            margin: 0 auto !important;
+            padding-bottom: 16px !important;
+          }
+          .slide-headline {
+            font-size: clamp(2.2rem, 8vw, 2.8rem) !important;
+            line-height: 1.05 !important;
+            margin-bottom: 16px !important;
+          }
+          .slide-sub {
+            font-size: 0.96rem !important;
+            max-width: 100% !important;
+            margin-bottom: 18px !important;
+          }
+          .btn-row {
+            justify-content: center !important;
+          }
+          .slide-counter {
+            bottom: 16px !important;
+            right: 16px !important;
+            left: auto !important;
+            font-size: 0.72rem !important;
+          }
+          .dots {
+            bottom: 16px !important;
+          }
+          .progress-bar {
+            display: none !important;
           }
         }
       `}</style>
@@ -439,18 +498,10 @@ export default function HeroBanner() {
             <div
               key={s._id}
               className={cls}
-              // style={{ backgroundImage: `url(${s.image})` }}
-              //               style={{
-              //   // backgroundImage: `url(${s.desktopImage})`
-
-
-              //   backgroundImage: `url(${isMobile ? s.mobileImage : s.desktopImage})`
-
-              // }}
               style={{
-                backgroundImage: `url(${isMobile && s.mobileImage ? s.mobileImage : s.desktopImage})`,
+                backgroundImage: `url(${getSlideImage(s)})`,
                 backgroundSize: isMobile ? (s.mobileFit || 'cover') : (s.desktopFit || 'cover'),
-                backgroundPosition: isMobile ? (s.mobilePosition || 'center') : (s.desktopPosition || 'center'),
+                backgroundPosition: isMobile ? (s.mobilePosition || 'top center') : (s.desktopPosition || 'center'),
               }}
               aria-hidden={i !== current}
             />
@@ -458,10 +509,10 @@ export default function HeroBanner() {
         })}
 
         {/* overlay */}
-        <div className={`slide-overlay ${slides[current].align}`} />
+        <div className={`slide-overlay ${currentAlign}`} />
 
         {/* text content — re-mount on slide change to retrigger animations */}
-        <div className={`banner-content ${slides[current].align}`} key={current}>
+        <div className={`banner-content ${currentAlign}`} key={current}>
           <div className="text-block">
             {/* <span className="slide-tag">{slides[current].tag}</span> */}
 
