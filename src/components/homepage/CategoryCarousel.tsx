@@ -37,7 +37,7 @@ const FALLBACK_IMAGES: Record<string, string> = {
 
 const getDisplayImage = (cat: Category) => {
   const api = process.env.NEXT_PUBLIC_API_URL || 'https://api.luxbay.in/api';
-
+const apiBase = api.replace(/\/api\/?$/, '');
   const raw = cat.image || '';
   const resolve = (r: string) => {
     if (!r) return '';
