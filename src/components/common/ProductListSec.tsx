@@ -59,7 +59,7 @@ const ProductListSec = ({ title, data, viewAllLink, isCircle }: ProductListSecPr
           <div className="w-full px-4 sm:px-0 text-center">
             <Link
               href={viewAllLink}
-              className="w-full inline-block sm:w-[218px] px-[54px] py-4 border rounded-full hover:bg-brand hover:text-white text-brand transition-all font-medium text-sm sm:text-base border-brand/20"
+              className="w-full inline-block sm:w-[218px] px-[54px] py-4 rounded-full bg-brand text-white border border-brand/20 hover:bg-brand-dark transition-all font-medium text-sm sm:text-base"
             >
               View All
             </Link>

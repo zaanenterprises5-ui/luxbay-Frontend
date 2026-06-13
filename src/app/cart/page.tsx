@@ -15,7 +15,7 @@ import AddressModal from "@/components/cart-page/AddressModal";
 
 // WhatsApp configuration
 const WHATSAPP_PHONE = process.env.NEXT_PUBLIC_WHATSAPP_PHONE || "917306203782";
-const WHATSAPP_MESSAGE = "Hi Lexvaro! I'd like to place an order.";
+const WHATSAPP_MESSAGE = "Hi Luxbay! I'd like to place an order.";
 
 export default function CartPage() {
   const { cart, totalPrice, adjustedTotalPrice } = useAppSelector(
@@ -120,20 +120,24 @@ export default function CartPage() {
 
               <div className="w-full lg:max-w-[505px] flex flex-col space-y-6 sticky top-24">
                 <div className="p-5 md:px-6 flex flex-col space-y-4 md:space-y-6 rounded-[20px] border border-brand/10 bg-white">
-                <h6 className="text-xl md:text-2xl font-bold text-brand">
+                <h6 className="text-xl md:text-2xl font-bold text-black">
                   Order Summary
                 </h6>
                 <div className="flex flex-col space-y-5">
                   <div className="flex items-center justify-between">
-                    <span className="md:text-xl text-brand/60">Subtotal</span>
-                    <span className="md:text-xl font-bold">₹{totalPrice}</span>
+                    <span className="md:text-xl text-black/70">Subtotal</span>
+                    <span className="md:text-xl font-bold text-black">₹{totalPrice}</span>
                   </div>
                   <hr className="border-t-brand/10" />
                   <div className="flex items-center justify-between">
-                    <span className="md:text-xl text-brand">Total</span>
-                    <span className="text-xl md:text-2xl font-bold">
+                    <span className="md:text-xl text-black/80">Total</span>
+                    <span className="text-xl md:text-2xl font-bold text-black">
                       ₹{Math.round(adjustedTotalPrice)}
                     </span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="md:text-xl text-black/70">Payment</span>
+                    <span className="md:text-xl font-bold text-black">WhatsApp</span>
                   </div>
                 </div>
                 <Button

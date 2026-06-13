@@ -31,7 +31,7 @@ const AddressForm = ({ address, onChange }: Props) => {
             value={address.name} 
             onChange={onChange}
             placeholder="John Doe" 
-            className="w-full bg-[#fdf5e6] border-none rounded-xl px-4 py-3.5 text-sm md:text-base focus:ring-2 focus:ring-brand outline-none transition-all placeholder:text-brand/20"
+            className="w-full bg-cream border-none rounded-xl px-4 py-3.5 text-sm md:text-base text-slate-900 focus:ring-2 focus:ring-brand outline-none transition-all placeholder:text-brand/40"
           />
         </div>
         <div className="space-y-1.5">
@@ -41,7 +41,7 @@ const AddressForm = ({ address, onChange }: Props) => {
             value={address.phone} 
             onChange={onChange}
             placeholder="+91 00000 00000" 
-            className="w-full bg-[#fdf5e6] border-none rounded-xl px-4 py-3.5 text-sm md:text-base focus:ring-2 focus:ring-brand outline-none transition-all placeholder:text-brand/20"
+            className="w-full bg-cream border-none rounded-xl px-4 py-3.5 text-sm md:text-base text-slate-900 focus:ring-2 focus:ring-brand outline-none transition-all placeholder:text-brand/40"
           />
         </div>
         <div className="md:col-span-2 space-y-1.5">
@@ -52,7 +52,7 @@ const AddressForm = ({ address, onChange }: Props) => {
             onChange={onChange}
             placeholder="House No, Street, Locality" 
             rows={3}
-            className="w-full bg-[#fdf5e6] border-none rounded-xl px-4 py-3.5 text-sm md:text-base focus:ring-2 focus:ring-brand outline-none transition-all resize-none placeholder:text-brand/20"
+            className="w-full bg-cream border-none rounded-xl px-4 py-3.5 text-sm md:text-base text-slate-900 focus:ring-2 focus:ring-brand outline-none transition-all resize-none placeholder:text-brand/40"
           />
         </div>
         <div className="space-y-1.5">
@@ -62,7 +62,7 @@ const AddressForm = ({ address, onChange }: Props) => {
             value={address.city} 
             onChange={onChange}
             placeholder="Kochi" 
-            className="w-full bg-[#fdf5e6] border-none rounded-xl px-4 py-3.5 text-sm md:text-base focus:ring-2 focus:ring-brand outline-none transition-all placeholder:text-brand/20"
+            className="w-full bg-cream border-none rounded-xl px-4 py-3.5 text-sm md:text-base text-slate-900 focus:ring-2 focus:ring-brand outline-none transition-all placeholder:text-brand/40"
           />
         </div>
         <div className="space-y-1.5">
@@ -72,7 +72,7 @@ const AddressForm = ({ address, onChange }: Props) => {
             value={address.pincode} 
             onChange={onChange}
             placeholder="682001" 
-            className="w-full bg-[#fdf5e6] border-none rounded-xl px-4 py-3.5 text-sm md:text-base focus:ring-2 focus:ring-brand outline-none transition-all placeholder:text-brand/20"
+            className="w-full bg-cream border-none rounded-xl px-4 py-3.5 text-sm md:text-base text-slate-900 focus:ring-2 focus:ring-brand outline-none transition-all placeholder:text-brand/40"
           />
         </div>
       </div>

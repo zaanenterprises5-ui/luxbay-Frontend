@@ -34,7 +34,7 @@ const AddressModal = ({ isOpen, onClose, productData, attributes }: Props) => {
 
     const WHATSAPP_PHONE = process.env.NEXT_PUBLIC_WHATSAPP_PHONE || "917306203782"; // Default if not set
     
-    let messageText = `Hi Lexvaro! I'd like to buy this product:\n\n`;
+    let messageText = `Hi Luxbay! I'd like to buy this product:\n\n`;
     messageText += `🛍️ *Product:* ${productData.title}\n`;
     messageText += `🔢 *Quantity:* ${productData.quantity}\n`;
     messageText += `🎨 *Flavour:* ${attributes[0] || "N/A"}\n`;
@@ -72,7 +72,7 @@ const AddressModal = ({ isOpen, onClose, productData, attributes }: Props) => {
                 value={formData.name} 
                 onChange={handleChange}
                 placeholder="John Doe" 
-                className="w-full bg-[#fdf5e6] border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand outline-none transition-all"
+                className="w-full bg-cream border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand outline-none transition-all"
               />
             </div>
             <div>
@@ -82,7 +82,7 @@ const AddressModal = ({ isOpen, onClose, productData, attributes }: Props) => {
                 value={formData.phone} 
                 onChange={handleChange}
                 placeholder="+91 00000 00000" 
-                className="w-full bg-[#fdf5e6] border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand outline-none transition-all"
+                className="w-full bg-cream border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand outline-none transition-all"
               />
             </div>
             <div>
@@ -93,7 +93,7 @@ const AddressModal = ({ isOpen, onClose, productData, attributes }: Props) => {
                 onChange={handleChange}
                 placeholder="House No, Street, Locality" 
                 rows={3}
-                className="w-full bg-[#fdf5e6] border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand outline-none transition-all resize-none"
+                className="w-full bg-cream border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand outline-none transition-all resize-none"
               />
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -104,7 +104,7 @@ const AddressModal = ({ isOpen, onClose, productData, attributes }: Props) => {
                   value={formData.city} 
                   onChange={handleChange}
                   placeholder="Kochi" 
-                  className="w-full bg-[#fdf5e6] border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand outline-none transition-all"
+                  className="w-full bg-cream border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand outline-none transition-all"
                 />
               </div>
               <div>
@@ -114,7 +114,7 @@ const AddressModal = ({ isOpen, onClose, productData, attributes }: Props) => {
                   value={formData.pincode} 
                   onChange={handleChange}
                   placeholder="682001" 
-                  className="w-full bg-[#fdf5e6] border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand outline-none transition-all"
+                  className="w-full bg-cream border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand outline-none transition-all"
                 />
               </div>
             </div>

@@ -36,8 +36,7 @@ const FALLBACK_IMAGES: Record<string, string> = {
 };
 
 const getDisplayImage = (cat: Category) => {
-  const api = process.env.NEXT_PUBLIC_API_URL || 'https://api.lexvaro.in/api';
-  const apiBase = api.replace(/\/api\/?$/, '');
+  const api = process.env.NEXT_PUBLIC_API_URL || 'https://api.luxbay.in/api';
 
   const raw = cat.image || '';
   const resolve = (r: string) => {
@@ -156,7 +155,7 @@ export default function CategoryCarousel() {
                       {/* Premium Overlay */}
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
                     </div>
-                    <span className="text-sm sm:text-lg font-bold text-black/80 group-hover:text-brand transition-all duration-300 uppercase tracking-wider">
+                    <span className="text-sm sm:text-lg font-bold text-foreground group-hover:text-brand transition-all duration-300 uppercase tracking-wider">
                       {cat.name}
                     </span>
                   </Link>

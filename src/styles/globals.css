@@ -5,14 +5,14 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 26, 26, 26;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
-  /* Brand colors - Refined Luxury Theme */
-  --brand: #be185d; /* Elegant Deep Rose */
-  --brand-dark: #9d174d;
-  --brand-light: #fffdf5; /* Rich Luxury Cream */
-  --brand-accent: #fce7f3; /* Soft Rose */
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  /* Brand colors - Red/Black Theme */
+  --brand: #e60000; /* Vibrant Red */
+  --brand-dark: #990000; /* Deep Red */
+  --brand-light: #111111; /* Very dark background for contrast */
+  --brand-accent: #330000; /* Dark Red for hover states */
 }
 
 @layer utilities {
@@ -23,32 +23,32 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 330 10% 10%;
-    --card: 0 0% 100%;
-    --card-foreground: 330 10% 10%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 330 10% 10%;
-    /* primary = Pink */
-    --primary: 330 72% 51%;
+    --background: 0 0% 0%; /* Pure Black */
+    --foreground: 0 0% 100%; /* White text */
+    --card: 0 0% 5%; /* Very dark grey/black */
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
+    /* primary = Vibrant Red */
+    --primary: 0 100% 45%; 
     --primary-foreground: 0 0% 100%;
-    /* secondary = Soft pink */
-    --secondary: 330 81% 96%;
-    --secondary-foreground: 330 72% 51%;
-    --muted: 330 20% 96%;
-    --muted-foreground: 330 10% 40%;
-    --accent: 330 81% 96%;
-    --accent-foreground: 330 72% 51%;
+    /* secondary = Dark Red */
+    --secondary: 0 100% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 0 100% 20%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
-    --border: 330 20% 90%;
-    --input: 330 20% 90%;
-    --ring: 330 72% 51%;
-    --chart-1: 330 72% 51%;
-    --chart-2: 330 60% 40%;
-    --chart-3: 330 50% 30%;
-    --chart-4: 330 40% 60%;
-    --chart-5: 330 30% 70%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 100% 45%;
+    --chart-1: 0 100% 45%;
+    --chart-2: 0 80% 40%;
+    --chart-3: 0 60% 30%;
+    --chart-4: 0 40% 20%;
+    --chart-5: 0 20% 10%;
     --radius: 0.5rem;
   }
 }

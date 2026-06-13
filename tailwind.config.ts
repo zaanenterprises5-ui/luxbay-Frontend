@@ -34,10 +34,11 @@ const config: Config = {
       },
       colors: {
         brand: {
-          DEFAULT: "#3D3E42",
-          dark: "#2A2B2E",
-          light: "#F4F4F5",
+          DEFAULT: "#e60000",
+          dark: "#990000",
+          light: "#111111",
         },
+        cream: "#fdf5e6",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

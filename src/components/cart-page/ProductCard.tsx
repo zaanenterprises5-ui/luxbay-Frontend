@@ -25,7 +25,7 @@ const ProductCard = ({ data }: ProductCardProps) => {
     <div className="flex items-start space-x-4">
       <Link
         href={`/shop/product/${data.id}/${data.name.split(" ").join("-")}`}
-        className="bg-[#f5ede4] rounded-lg w-full min-w-[100px] max-w-[100px] sm:max-w-[124px] aspect-square overflow-hidden relative"
+        className="bg-cream rounded-lg w-full min-w-[100px] max-w-[100px] sm:max-w-[124px] aspect-square overflow-hidden relative"
       >
         <Image
           src={data.srcUrl}

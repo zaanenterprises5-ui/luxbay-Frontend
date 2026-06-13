@@ -15,12 +15,12 @@ const TopNavbar = () => {
             href="/"
             className="flex items-center mr-3 lg:mr-10"
           >
-          <Image
-            src="/images/logo.png"
-            alt="Lexvaro Logo"
-            width={160}
-            height={160}
-            className="object-contain h-14 md:h-20 w-auto"
+          <img
+            src="/images/logo.svg"
+            alt="Luxbay Logo"
+            width="160"
+            height="56"
+            className="object-contain h-14 md:h-16 w-auto"
           />
           </Link>
         </div>

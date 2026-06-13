@@ -13,7 +13,7 @@ const ProductCard = ({ data, priority = false, isCircle = false }: ProductCardPr
   return (
     <Link
       href={`/shop/product/${data.id}/${data.title.split(" ").join("-")}`}
-      className="flex flex-col items-start aspect-auto"
+      className="flex flex-col items-start w-full aspect-auto group"
     >
       <div
         className={
@@ -26,13 +26,13 @@ const ProductCard = ({ data, priority = false, isCircle = false }: ProductCardPr
           src={data.srcUrl}
           fill
           sizes="(max-width: 768px) 50vw, 320px"
-          className="object-cover hover:scale-110 transition-all duration-700 ease-out"
+          className="object-cover group-hover:scale-105 transition-all duration-700 ease-out"
           alt={data.title}
           priority={priority}
         />
       </div>
-      <strong className="text-brand xl:text-xl">{data.title}</strong>
-      <p className="text-brand/60 text-sm xl:text-base">{data.category}</p>
+      <strong className="text-foreground xl:text-xl">{data.title}</strong>
+      <p className="text-foreground/70 text-sm xl:text-base">{data.category}</p>
       <div className="flex items-center space-x-[5px] xl:space-x-2.5">
         <span className="font-bold text-brand text-xl xl:text-2xl">
           ₹{data.price}

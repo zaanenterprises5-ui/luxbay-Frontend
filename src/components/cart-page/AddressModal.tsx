@@ -47,7 +47,7 @@ const AddressModal = ({ isOpen, onClose, address, onChange, onSave }: Props) => 
               value={address.name} 
               onChange={onChange}
               placeholder="John Doe" 
-              className="w-full bg-[#fdf5e6] border-none rounded-2xl px-4 py-4 text-sm focus:ring-2 focus:ring-brand outline-none transition-all placeholder:text-brand/20"
+              className="w-full bg-cream border-none rounded-2xl px-4 py-4 text-sm text-slate-900 focus:ring-2 focus:ring-brand outline-none transition-all placeholder:text-brand/40"
             />
           </div>
           <div className="space-y-1.5">
@@ -59,7 +59,7 @@ const AddressModal = ({ isOpen, onClose, address, onChange, onSave }: Props) => 
               type="tel"
               maxLength={15}
               placeholder="+91 00000 00000" 
-              className={`w-full bg-[#fdf5e6] border-none rounded-2xl px-4 py-4 pr-10 text-sm focus:ring-2 outline-none transition-all placeholder:text-brand/20 ${
+              className={`w-full bg-cream border-none rounded-2xl px-4 py-4 pr-10 text-sm text-slate-900 focus:ring-2 outline-none transition-all placeholder:text-brand/40 ${
                 address.phone && !/^(?:\+91|0)?[6-9]\d{9}$/.test(address.phone.replace(/\s+/g, "")) 
                 ? "ring-2 ring-red-400" 
                 : "focus:ring-brand"
@@ -77,7 +77,7 @@ const AddressModal = ({ isOpen, onClose, address, onChange, onSave }: Props) => 
               onChange={onChange}
               placeholder="House No, Street, Locality" 
               rows={3}
-              className="w-full bg-[#fdf5e6] border-none rounded-2xl px-4 py-4 text-sm focus:ring-2 focus:ring-brand outline-none transition-all resize-none placeholder:text-brand/20"
+              className="w-full bg-cream border-none rounded-2xl px-4 py-4 text-sm text-slate-900 focus:ring-2 focus:ring-brand outline-none transition-all resize-none placeholder:text-brand/40"
             />
           </div>
           <div className="space-y-1.5">
@@ -87,7 +87,7 @@ const AddressModal = ({ isOpen, onClose, address, onChange, onSave }: Props) => 
               value={address.city} 
               onChange={onChange}
               placeholder="Kochi" 
-              className="w-full bg-[#fdf5e6] border-none rounded-2xl px-4 py-4 text-sm focus:ring-2 focus:ring-brand outline-none transition-all placeholder:text-brand/20"
+              className="w-full bg-cream border-none rounded-2xl px-4 py-4 text-sm text-slate-900 focus:ring-2 focus:ring-brand outline-none transition-all placeholder:text-brand/40"
             />
           </div>
           <div className="space-y-1.5">
@@ -97,7 +97,7 @@ const AddressModal = ({ isOpen, onClose, address, onChange, onSave }: Props) => 
               value={address.pincode} 
               onChange={onChange}
               placeholder="682001" 
-              className="w-full bg-[#fdf5e6] border-none rounded-2xl px-4 py-4 text-sm focus:ring-2 focus:ring-brand outline-none transition-all placeholder:text-brand/20"
+              className="w-full bg-cream border-none rounded-2xl px-4 py-4 text-sm text-slate-900 focus:ring-2 focus:ring-brand outline-none transition-all placeholder:text-brand/40"
             />
           </div>
         </div>
